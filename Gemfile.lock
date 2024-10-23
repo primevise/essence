@@ -1,0 +1,20 @@
+PATH
+  remote: .
+  specs:
+    essence (0.0.1)
+      phlex (>= 2.0.0.beta2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    phlex (2.0.0.beta2)
+
+PLATFORMS
+  arm64-darwin-23
+  ruby
+
+DEPENDENCIES
+  essence!
+
+BUNDLED WITH
+   2.5.9
