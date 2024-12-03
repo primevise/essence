@@ -1,13 +1,17 @@
 PATH
   remote: .
   specs:
-    essence (0.0.1)
-      phlex (>= 2.0.0.beta2)
+    essence (0.1.0)
+      phlex (>= 2.0.0.rc1)
+      tailwind_merge (>= 0.13.3)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    phlex (2.0.0.beta2)
+    lru_redux (1.1.0)
+    phlex (2.0.0.rc1)
+    tailwind_merge (0.13.3)
+      lru_redux (~> 1.1)
 
 PLATFORMS
   arm64-darwin-23

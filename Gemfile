@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# Specify your gem's dependencies in oversee.gemspec.
+# Specify your gem's dependencies in essence.gemspec.
 gemspec
 
 # Start debugger with binding.b [https://github.com/ruby/debug]
