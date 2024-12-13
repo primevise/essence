@@ -1,9 +1,12 @@
 require "tailwind_merge"
 
 module Essence
-  # Autoloading compontents
-  require_relative "../components/essence/component"
-  require_relative "../components/essence/link"
+  # Autoloading
+  autoload :Component, "essence/component"
+
+  autoload :Link, "essence/components/link"
+  autoload :Skeleton, "essence/components/skeleton"
+  autoload :Row, "essence/components/row"
 
   def self.display
     :voila
