@@ -1,15 +1,20 @@
-class Components::Essence::Link < Phlex::HTML
-  CLASSES = "inline-flex items-center gap-2 bg-pink-500"
+# frozen_string_literal: true
+
+class Essence::Link < Essence::Component
+  CLASS = "inline-flex items-center gap-1 font-medium text-gray-900 border-b-2 hover:border-gray-900 transition-colors"
+  KINDS = {
+    regular: "border-transparent",
+    underline: "border-gray-200"
+  }
 
   attr_reader :attributes
 
-  def initialize(**attributes)
+  def initialize(kind: :regular, **attributes)
     @attributes = attributes
-
-    @class = ::TailwindMerge::Merger.new.merge([CLASSES, attributes.delete(:class)])
+    @attributes[:class] = @attributes[:class] ? TAILWIND_MERGER.merge([ CLASS, @attributes[:class] ]) : CLASS
   end
 
   def view_template(&)
-    a(class: @class, **attributes, &)
+    a(**attributes, &)
   end
 end
