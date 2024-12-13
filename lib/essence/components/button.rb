@@ -2,6 +2,7 @@
 
 class Essence::Button < Essence::Component
   BASE = "inline-flex items-center rounded-xs border border-transparent font-medium transition duration-150 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+
   SIZES = {
     none: "",
     xs: "text-[0.6rem] px-2 py-1.5 gap-1",
@@ -23,7 +24,7 @@ class Essence::Button < Essence::Component
   }
 
   attr_reader :size
-  attr_reader :tone
+  attr_reader :kind
   attr_reader :attributes
 
   def initialize(size: :md, kind: :primary, **attributes)
