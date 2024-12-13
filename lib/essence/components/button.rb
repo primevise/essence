@@ -10,6 +10,7 @@ class Essence::Button < Essence::Component
     lg: "text-base px-6 py-2.5 gap-2.5",
     xl: "text-base px-8 py-3 gap-3"
   }
+
   KINDS = {
     primary: "text-white bg-indigo-500 hover:bg-indigo-500/90",
     secondary: "text-gray-700 bg-gray-100 hover:bg-gray-200",
@@ -43,6 +44,6 @@ class Essence::Button < Essence::Component
   end
 
   def construct_classes(classes)
-    TAILWIND_MERGER.merge([ BASE, SIZES[size], TONES[kind], classes ].compact)
+    TAILWIND_MERGER.merge([ BASE, SIZES[size], KINDS[kind], classes ].compact)
   end
 end
