@@ -14,13 +14,14 @@ class Essence::Button < Essence::Component
 
   KINDS = {
     primary: "text-white bg-indigo-500 hover:bg-indigo-500/90",
-    secondary: "text-gray-700 bg-gray-100 hover:bg-gray-200",
-    critical: "text-white bg-rose-500 hover:bg-rose-400",
-    warning: "text-white bg-amber-500 hover:bg-amber-400",
-    success: "text-white bg-emerald-500 hover:bg-emerald-400",
-    info: "text-white bg-blue-500 hover:bg-blue-400",
-    dark: "text-white bg-gray-900 hover:bg-gray-800",
-    ghost: "text-gray-700 bg-white hover:bg-gray-200 hover:text-gray-800"
+    secondary: "text-gray-700 bg-gray-100 hover:bg-gray-200/90",
+    critical: "text-white bg-rose-500 hover:bg-rose-400/90",
+    warning: "text-white bg-amber-500 hover:bg-amber-400/90",
+    success: "text-white bg-emerald-500 hover:bg-emerald-400/90",
+    info: "text-white bg-blue-500 hover:bg-blue-400/90",
+    dark: "text-white bg-gray-900 hover:bg-gray-800/90",
+    white: "text-gray-900 bg-white hover:bg-gray-200/90",
+    ghost: "text-gray-700 bg-white hover:bg-gray-200/90 hover:text-gray-800"
   }
 
   attr_reader :size
