@@ -3,10 +3,11 @@
 require "dry/cli"
 
 module Essence
-
   module CLI
     module Commands
       extend Dry::CLI::Registry
+
+      COMPONENTS_DIR = Pathname.new(File.expand_path("components", __dir__))
 
       class Version < Dry::CLI::Command
         desc "Print Essence version"
@@ -20,8 +21,10 @@ module Essence
         desc "Install Essence to your project"
 
         def call(*)
-          puts "--- Installing Essence ---"
-
+          puts "> Installing Essence..."
+          puts "> Copying base component to your project"
+          Essence::CLI::Commands.copy_component(component_name: "component")
+          puts "> Essence has been successfully installed!"
         end
       end
 
@@ -38,19 +41,9 @@ module Essence
         def call(*args)
           component_name = args[0][:component_name]
 
-          puts Essence.components.keys
-
-          source_dir = Pathname.new(File.expand_path("components", __dir__))
-          source_path = source_dir.join("#{component_name}.rb")
-
-          destination_dir = Pathname.new(File.expand_path(Dir.pwd)).join("app/components")
-          destination_path = destination_dir.join("#{component_name}.rb")
-
-          FileUtils.mkdir_p(destination_dir)
-          FileUtils.copy(source_path, destination_path)
-
           puts "Essence:"
-          puts "> Successfully added #{component_name} component to #{destination_path}"
+          Essence::CLI::Commands.copy_component(component_name:)
+
         end
       end
 
@@ -72,21 +65,30 @@ module Essence
 
       register "add", Add, aliases: ["a", "generate", "g"]
       register "version", Version, aliases: ["v", "-v", "--version"]
+      register "install", Install, aliases: ["i"]
       # register "remove", Remove, aliases: ["r", "destroy", "d"]
-      # register "install", Install, aliases: ["i"]
+
+
+      private
+
+      # UTILITIES
+      def self.copy_component(component_name:)
+        source_dir = COMPONENTS_DIR
+        source_path = source_dir.join("#{component_name}.rb")
+
+        destination_dir = Pathname.new(File.expand_path(Dir.pwd)).join("app/components")
+        destination_path = destination_dir.join("#{component_name}.rb")
+
+        FileUtils.mkdir_p(destination_dir)
+        FileUtils.copy(source_path, destination_path)
+
+        puts "> Successfully added #{component_name} component to #{destination_path}"
+      end
     end
 
     def self.call(*args)
       Dry::CLI.new(Commands).call
     end
 
-    private
-
-    COMPONENTS_PATH = Pathname.new(File.expand_path("components", __dir__))
-
-    def copy_component(name)
-      puts "Copying component #{name}"
-      FileUtils.cp(COMPONENTS_PATH.join("#{name}.rb"), "lib/essence/components/test/#{name}.rb")
-    end
   end
 end
