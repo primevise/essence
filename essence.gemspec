@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
     Dir["{components,lib}/**/*", "LICENCE", "Rakefile", "README.md"]
   end
 
+  spec.add_dependency "dry-cli", ">= 0.7", "< 2"
   spec.add_dependency "phlex", ">= 2.0.0.rc1"
   spec.add_dependency "tailwind_merge", ">= 0.13.3"
 end
