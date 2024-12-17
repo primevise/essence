@@ -15,8 +15,11 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = "https://github.com/primevise/essence"
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
-    Dir["{components,lib}/**/*", "LICENCE", "Rakefile", "README.md"]
+    Dir["{components,lib}/**/*", "exe/*", "LICENCE", "Rakefile", "README.md"]
   end
+
+  spec.bindir = "exe"
+ 	spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
 
   spec.add_dependency "dry-cli", ">= 0.7", "< 2"
   spec.add_dependency "phlex", ">= 2.0.0.rc1"
