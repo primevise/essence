@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "tailwind_merge"
 
 module Essence
@@ -11,13 +13,30 @@ module Essence
 
   autoload :CLI, "essence/cli"
 
-  def self.components
-    @components ||= {
+  # Components
+  # Class names and classes are separated to avoid loading in Phlex into the CLI tooling
+
+  def self.component_class_names
+    @component_class_names ||= {
+      button: "Essence::Button",
+      component: "Essence::Component",
+      link: "Essence::Link",
+      skeleton: "Essence::Skeleton",
+      row: "Essence::Row",
+    }
+  end
+
+  def self.component_classes
+    @components_classes ||= {
       button: ::Essence::Button,
       component: ::Essence::Component,
       link: ::Essence::Link,
       skeleton: ::Essence::Skeleton,
       row: ::Essence::Row,
     }
+  end
+
+  def self.component_names
+    @component_names ||= component_class_names.keys
   end
 end
