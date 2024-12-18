@@ -20,8 +20,9 @@ module Essence
       COMPONENTS_DIR = Pathname.new(File.expand_path("components", __dir__))
       DESTINATION_DIR = Pathname.new(File.expand_path(Dir.pwd)).join("app/components")
       COMPONENT_DEFINITION_PREFIX = "class Essence::"
-      COMPONENT_DEFINITION_SUFFIX = "< Essence::Component"
+      COMPONENT_DEFINITION_SUFFIX = "< Essence::Essence"
       PHLEX_COMPONENT_DEFINITION_PREFIX = "class Components::"
+      PHLEX_COMPONENT_DEFINITION_SUFFIX = "< Components::Essence"
 
       # Registering commands
       register "add", Add, aliases: ["a", "generate", "g"]
@@ -49,6 +50,13 @@ module Essence
 
         replaced_content = File.read(component_file).gsub(from, to)
         File.write(component_file, replaced_content)
+      end
+
+      def self.rename_component_file(from:, to:)
+        return if from.nil? || to.nil?
+        return unless File.exist?(from)
+
+        FileUtils.mv(from, to)
       end
     end
   end

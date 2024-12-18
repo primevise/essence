@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class Essence::Skeleton < Essence::Essence
-  CLASSES = "animate-pulse bg-gray-200/55 rounded-xs"
+class Components::Skeleton < Components::Essence
+  CLASSES = "animate-pulse bg-gray-200/75 rounded-xs"
 
   def initialize(**attributes)
     @attributes = attributes

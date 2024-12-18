@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Essence::Row < Essence::Component
+class Essence::Row < Essence::Essence
   CLASS = "flex gap-4"
 
   KINDS = {

@@ -18,8 +18,8 @@ module Essence
 
   def self.component_class_names
     @component_class_names ||= {
+      essence: "Essence::Essence",
       button: "Essence::Button",
-      component: "Essence::Component",
       link: "Essence::Link",
       skeleton: "Essence::Skeleton",
       row: "Essence::Row",
@@ -28,8 +28,8 @@ module Essence
 
   def self.component_classes
     @components_classes ||= {
+      essence: ::Essence::Essence,
       button: ::Essence::Button,
-      component: ::Essence::Component,
       link: ::Essence::Link,
       skeleton: ::Essence::Skeleton,
       row: ::Essence::Row,

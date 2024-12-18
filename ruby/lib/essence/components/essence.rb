@@ -1,4 +1,6 @@
-class Essence::Component < Phlex::HTML
+class Essence::Essence < Phlex::HTML
+  extend Phlex::Kit
+
   TAILWIND_MERGER = ::TailwindMerge::Merger.new.freeze unless defined?(TAILWIND_MERGER)
 
   attr_reader :attributes

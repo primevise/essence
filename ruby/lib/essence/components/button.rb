@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Essence::Button < Essence::Component
+class Essence::Button < Essence::Essence
   BASE = "inline-flex items-center rounded-xs border border-transparent font-medium transition duration-150 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed hover:opacity-90"
 
   SIZES = {
