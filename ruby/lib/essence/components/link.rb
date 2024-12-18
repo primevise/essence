@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Essence::Link < Essence::Essence
-  CLASS = "inline-flex items-center gap-1 font-medium text-gray-900 border-b-2 hover:border-gray-900 transition-colors"
+  CLASS = "inline-flex w-fit items-center gap-1 font-medium text-gray-900 border-b-2 hover:border-gray-900 transition-colors"
   KINDS = {
     regular: "border-transparent",
     underline: "border-gray-200"

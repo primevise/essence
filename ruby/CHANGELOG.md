@@ -1,8 +1,11 @@
 # Changelog
 
-This is the changelog for the `oversee` gem. For now, most of the updates will be reflected here.
+This is the changelog for the `essence` gem. For now, most of the updates will be reflected here.
 
 ### Unreleased
+
+- fix: Adding `w-fit` to Link
+- fix: Typo in Row component item definition
 
 ### 0.2.0
 

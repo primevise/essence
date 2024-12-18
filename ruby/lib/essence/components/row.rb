@@ -24,6 +24,6 @@ class Essence::Row < Essence::Essence
   end
 
   def item(**attrs, &)
-    div(class: TAILWIND_MERGER.merge([ "flex items-center gap-2 flex-wrap", iattrs[:class] ]), **attrs, &)
+    div(class: TAILWIND_MERGER.merge([ "flex items-center gap-2 flex-wrap", attrs[:class] ]), **attrs, &)
   end
 end
