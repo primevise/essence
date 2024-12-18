@@ -10,12 +10,17 @@ module Essence
       def call(*args)
         component_name = args[0][:component_name]
 
-        return puts "> Component #{component_name} unavailable" unless Essence.component_names.include?(component_name.to_sym)
+        return puts "> #{component_name}: component unsupported" unless Essence.component_names.include?(component_name.to_sym)
 
         Essence::CLI::Commands.copy_component(component_name:)
         Essence::CLI::Commands.replace_component_contents(component_name:)
+        Essence::CLI::Commands.replace_component_contents(
+          component_name:,
+          from: Essence::CLI::Commands::COMPONENT_DEFINITION_SUFFIX,
+          to: Essence::CLI::Commands::PHLEX_COMPONENT_DEFINITION_SUFFIX
+        )
 
-        puts "> Successfully added #{component_name} component to #{DESTINATION_DIR.join("#{component_name}.rb")}"
+        puts "> Successfully added #{component_name} component to #{Essence::CLI::Commands::DESTINATION_DIR.join("#{component_name}.rb")}"
       end
     end
   end
