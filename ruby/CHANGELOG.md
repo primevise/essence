@@ -4,7 +4,9 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 
 ### Unreleased
 
-- fix: Adding `w-fit` to Link
+- feature: Adding `Badge` component
+- feature: Adding `w-fit` to `Button` component
+- fix: Adding `w-fit` to `Link`
 - fix: Typo in Row component item definition
 
 ### 0.2.0
