@@ -4,6 +4,8 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 
 ### Unreleased
 
+### 0.2.1
+
 - feature: Adding `Avatar` component
 - feature: Adding `Badge` component
 - feature: Adding `w-fit` to `Button` component
