@@ -4,12 +4,13 @@ require "tailwind_merge"
 
 module Essence
   # Autoloading
-  autoload :Component, "essence/components/component"
-
+  autoload :Avatar, "essence/components/avatar"
+  autoload :Badge, "essence/components/badge"
   autoload :Button, "essence/components/button"
+  # autoload :Essence, "essence/components/essence" # Base component
   autoload :Link, "essence/components/link"
-  autoload :Skeleton, "essence/components/skeleton"
   autoload :Row, "essence/components/row"
+  autoload :Skeleton, "essence/components/skeleton"
 
   autoload :CLI, "essence/cli"
 
@@ -19,12 +20,12 @@ module Essence
   def self.component_class_names
     @component_class_names ||= {
       essence: "Essence::Essence",
-      avataro: "Essence::Avatar",
+      avatar: "Essence::Avatar",
       badge: "Essence::Badge",
       button: "Essence::Button",
       link: "Essence::Link",
-      skeleton: "Essence::Skeleton",
       row: "Essence::Row",
+      skeleton: "Essence::Skeleton",
     }
   end
 
@@ -35,8 +36,8 @@ module Essence
       badge: ::Essence::Badge,
       button: ::Essence::Button,
       link: ::Essence::Link,
-      skeleton: ::Essence::Skeleton,
       row: ::Essence::Row,
+      skeleton: ::Essence::Skeleton,
     }
   end
 

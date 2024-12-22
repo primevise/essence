@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    essence (0.1.0)
+    essence (0.2.1)
       dry-cli (>= 0.7, < 2)
       phlex (>= 2.0.0.rc1)
       tailwind_merge (>= 0.13.3)
