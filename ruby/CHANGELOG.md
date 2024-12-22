@@ -4,10 +4,12 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 
 ### Unreleased
 
+- feature: Adding `Avatar` component
 - feature: Adding `Badge` component
 - feature: Adding `w-fit` to `Button` component
 - fix: Adding `w-fit` to `Link`
 - fix: Typo in Row component item definition
+- fix: Unifying base class string
 
 ### 0.2.0
 

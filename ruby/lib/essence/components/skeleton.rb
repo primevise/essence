@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 class Essence::Skeleton < Essence::Essence
-  CLASSES = "animate-pulse bg-gray-200/55 rounded-xs"
+  BASE = "animate-pulse bg-gray-200/55 rounded-xs"
 
   def initialize(**attributes)
     @attributes = attributes
-    @attributes[:class] = @attributes[:class] ? TAILWIND_MERGER.merge([ CLASSES, @attributes[:class] ]) : CLASSES
+    @attributes[:class] = @attributes[:class] ? TAILWIND_MERGER.merge([ BASE, @attributes[:class] ]) : BASE
   end
 
   def view_template(&)

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Essence::Row < Essence::Essence
-  CLASS = "flex gap-4"
+  BASE = "flex gap-4"
 
   KINDS = {
     default: "flex-col md:flex-row md:items-center md:justify-between",
@@ -16,7 +16,7 @@ class Essence::Row < Essence::Essence
   def initialize(kind: :default, **attributes)
     @kind = kind
     @attributes = attributes
-    @attributes[:class] = @attributes[:class] ? TAILWIND_MERGER.merge([ CLASS, KINDS[kind], @attributes[:class] ]) : CLASS
+    @attributes[:class] = @attributes[:class] ? TAILWIND_MERGER.merge([ BASE, KINDS[kind], @attributes[:class] ]) : BASE
   end
 
   def view_template(&)

@@ -19,6 +19,8 @@ module Essence
   def self.component_class_names
     @component_class_names ||= {
       essence: "Essence::Essence",
+      avataro: "Essence::Avatar",
+      badge: "Essence::Badge",
       button: "Essence::Button",
       link: "Essence::Link",
       skeleton: "Essence::Skeleton",
@@ -29,6 +31,8 @@ module Essence
   def self.component_classes
     @components_classes ||= {
       essence: ::Essence::Essence,
+      avatar: ::Essence::Avatar,
+      badge: ::Essence::Badge,
       button: ::Essence::Button,
       link: ::Essence::Link,
       skeleton: ::Essence::Skeleton,
