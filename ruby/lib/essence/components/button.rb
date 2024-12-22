@@ -2,14 +2,12 @@
 
 class Essence::Badge < Essence::Essence
   BASE = "inline-flex items-center justify-center w-fit rounded-full border border-transparent font-medium transition duration-150 hover:opacity-90"
-
   SIZES = {
     none: "",
     sm: "text-[0.65rem] px-2 py-0.5 gap-1",
     md: "text-xs px-2.5 py-1 gap-2",
     lg: "text-sm px-4 py-1.5 gap-2"
   }
-
   KINDS = {
     primary: "text-gray-900 border-gray-200",
     success: "text-white bg-emerald-500",

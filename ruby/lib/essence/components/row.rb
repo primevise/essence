@@ -2,7 +2,6 @@
 
 class Essence::Row < Essence::Essence
   BASE = "flex gap-4"
-
   KINDS = {
     default: "flex-col md:flex-row md:items-center md:justify-between",
     center: "flex-col md:flex-row md:items-center md:justify-center",

@@ -2,7 +2,6 @@
 
 class Essence::Avatar < Essence::Essence
   BASE = "border border-transparent rounded-full bg-gray-100 aspect-square inline-flex items-center justify-center font-medium text-gray-700"
-
   SIZES = {
     sm: "size-6 text-xs",
     md: "size-8 text-sm",
