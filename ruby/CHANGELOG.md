@@ -4,6 +4,8 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 
 ### Unreleased
 
+- fix: Fixing `Button` component. It was mixed up with badge for some reason.
+
 ### 0.2.1
 
 - feature: Adding `Avatar` component
