@@ -19,7 +19,7 @@ class Essence::Button < Essence::Essence
     info: "text-white bg-blue-500 hover:bg-blue-400",
     dark: "text-white bg-gray-900 hover:bg-gray-800",
     white: "text-gray-900 bg-white hover:bg-gray-200",
-    ghost: "text-gray-900 bg-white hover:bg-gray-200 hover:text-gray-800"
+    ghost: "text-gray-900 hover:bg-gray-200 hover:text-gray-800"
   }
 
   attr_reader :size

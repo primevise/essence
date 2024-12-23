@@ -7,10 +7,14 @@ class Essence::Essence < Phlex::HTML
 
   def initialize(**attributes)
     @attributes = attributes
-    @attributes[:class] = TAILWIND_MERGER.merge([self.class::CLASSES, @attributes[:class]]) if @attributes[:class]
+    @attributes[:class] = merge_classes([self.class::BASE, @attributes[:class])
   end
 
   private
+
+  def merge_classes(*classes)
+    TAILWIND_MERGER.merge(classes.compact)
+  end
 
   def default_attributes
     {}
