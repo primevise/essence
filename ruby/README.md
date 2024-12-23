@@ -14,10 +14,10 @@ A simple, ergonomic and performant component library for Ruby applications.
 
 ### Features
 
-- Tailored components - Designed using flexibility in mind while streamlining the development process
-- Gorgeous simplicity - Essence empowers minimalistic user interface with purposeful accents
-- Geared for performance - Keep everything in one place. No spreadsheets or getting lost between tooling
-- Ergonomic approach - Essence is designed to be easy to use and understand
+- Tailored components - Flexible by design while streamlining the development process
+- Gorgeous simplicity - Empowers minimalistic user interface with purposeful accents
+- Geared for performance - Built with performance in mind
+- Ergonomic approach - Designed to be easy to use and understand
 
 ---
 
