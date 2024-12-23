@@ -45,6 +45,7 @@ More information on about the installation can be found in the [documentation](h
 
 - [Mintis](https://mintis.app)
 - [Hansa](https://hansahq.com)
+- [Oversee](https://github.com/primevise/oversee)
 - [Release Server](https://releaseserver.com)
 - [College Life Work](https://work.collegelife.co)
 
