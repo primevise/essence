@@ -12,11 +12,6 @@ class Essence::Essence < Phlex::HTML
 
   private
 
-  def merge_classes(*classes)
-    TAILWIND_MERGER.merge(classes.compact)
-  end
-
-  def default_attributes
-    {}
-  end
+  def merge_classes(*classes) = TAILWIND_MERGER.merge([*classes].compact)
+  def default_attributes = {}
 end
