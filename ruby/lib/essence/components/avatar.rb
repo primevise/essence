@@ -13,9 +13,9 @@ class Essence::Avatar < Essence::Essence
   attr_reader :size
 
   def initialize(size: :md, **attributes)
+    super(**attributes)
     @size = size
-    @attributes = attributes
-    @attributes[:class] = construct_classes(@attributes[:class])
+    @attributes[:class] = merge_classes([ BASE, SIZES[size], @attributes[:class]])
   end
 
   def view_template(&)
@@ -27,9 +27,5 @@ class Essence::Avatar < Essence::Essence
 
   def fallback(**attrs, &)
     div(**attrs, &)
-  end
-
-  def construct_classes(classes)
-    TAILWIND_MERGER.merge([ BASE, SIZES[size], classes ].compact)
   end
 end

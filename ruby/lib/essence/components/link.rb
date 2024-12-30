@@ -10,8 +10,8 @@ class Essence::Link < Essence::Essence
   attr_reader :attributes
 
   def initialize(kind: :regular, **attributes)
-    @attributes = attributes
-    @attributes[:class] = @attributes[:class] ? TAILWIND_MERGER.merge([ BASE, @attributes[:class] ]) : BASE
+    super(**attributes)
+    @attributes[:class] = merge_classes([ BASE, @attributes[:class]])
   end
 
   def view_template(&)

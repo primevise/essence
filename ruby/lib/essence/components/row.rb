@@ -14,8 +14,8 @@ class Essence::Row < Essence::Essence
 
   def initialize(kind: :default, **attributes)
     @kind = kind
-    @attributes = attributes
-    @attributes[:class] = @attributes[:class] ? TAILWIND_MERGER.merge([ BASE, KINDS[kind], @attributes[:class] ]) : BASE
+    super(**attributes)
+    @attributes[:class] = merge_classes([ BASE, KINDS[kind], @attributes[:class]])
   end
 
   def view_template(&)

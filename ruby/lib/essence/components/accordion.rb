@@ -9,8 +9,8 @@ class Essence::Accordion < Essence::Essence
   attr_reader :attributes
 
   def initialize(**attributes)
-    @attributes = attributes
-    @attributes[:class] = merge_classes(@attributes[:class])
+    super(**attributes)
+    @attributes[:class] = merge_classes([ BASE, @attributes[:class]])
   end
 
   def view_template(&)

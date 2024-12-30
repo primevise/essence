@@ -4,8 +4,8 @@ class Essence::Skeleton < Essence::Essence
   BASE = "animate-pulse bg-gray-200/55 rounded-xs"
 
   def initialize(**attributes)
-    @attributes = attributes
-    @attributes[:class] = @attributes[:class] ? TAILWIND_MERGER.merge([ BASE, @attributes[:class] ]) : BASE
+    super(**attributes)
+    @attributes[:class] = merge_classes([ BASE, @attributes[:class]])
   end
 
   def view_template(&)

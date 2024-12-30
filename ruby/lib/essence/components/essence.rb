@@ -6,12 +6,11 @@ class Essence::Essence < Phlex::HTML
   attr_reader :attributes
 
   def initialize(**attributes)
-    @attributes = default_attributes.merge(attributes)
-    @attributes[:class] = merge_classes([self.class::BASE, @attributes[:class])
+    @attributes = default_attributes.deep_merge(attributes)
   end
 
   private
 
-  def merge_classes(*classes) = TAILWIND_MERGER.merge([*classes].compact)
   def default_attributes = {}
+  def merge_classes(*classes) = TAILWIND_MERGER.merge([ *classes ].compact)
 end

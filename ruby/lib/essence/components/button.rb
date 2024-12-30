@@ -29,8 +29,8 @@ class Essence::Button < Essence::Essence
   def initialize(size: :md, kind: :primary, **attributes)
     @size = size
     @kind = kind
-    @attributes = attributes
-    @attributes[:class] = construct_classes(@attributes[:class])
+    super(**attributes)
+    @attributes[:class] = merge_classes([ BASE, SIZES[size], KINDS[kind], @attributes[:class]])
   end
 
   def view_template(&)
@@ -41,9 +41,5 @@ class Essence::Button < Essence::Essence
 
   def element_tag(...)
     attributes[:href] ? a(...) : button(...)
-  end
-
-  def construct_classes(classes)
-    TAILWIND_MERGER.merge([ BASE, SIZES[size], KINDS[kind], classes ].compact)
   end
 end
