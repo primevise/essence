@@ -4,6 +4,7 @@ require "tailwind_merge"
 
 module Essence
   # Autoloading
+  autoload :Accordion, "essence/components/accordion"
   autoload :Avatar, "essence/components/avatar"
   autoload :Badge, "essence/components/badge"
   autoload :Button, "essence/components/button"
@@ -20,6 +21,7 @@ module Essence
   def self.component_class_names
     @component_class_names ||= {
       essence: "Essence::Essence",
+      accordion: "Essence::Accordion",
       avatar: "Essence::Avatar",
       badge: "Essence::Badge",
       button: "Essence::Button",
@@ -32,6 +34,7 @@ module Essence
   def self.component_classes
     @components_classes ||= {
       essence: ::Essence::Essence,
+      accordion: ::Essence::Accordion,
       avatar: ::Essence::Avatar,
       badge: ::Essence::Badge,
       button: ::Essence::Button,
