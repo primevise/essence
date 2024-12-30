@@ -4,6 +4,8 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 
 ### Unreleased
 
+### 0.2.3
+
 - feature: Adding `Accordion` component
 - feature: Merging classes inside the base component
 - fix: Fixing the ghost variant of the `Button` component.
