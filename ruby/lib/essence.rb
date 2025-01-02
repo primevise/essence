@@ -2,6 +2,8 @@
 
 require "tailwind_merge"
 
+require_relative "essence/configuration"
+
 module Essence
   # Autoloading
   autoload :Accordion, "essence/components/accordion"
@@ -46,5 +48,14 @@ module Essence
 
   def self.component_names
     @component_names ||= component_class_names.keys
+  end
+
+  # Configuration
+  def self.configuration
+    @configuration ||= Configuration.new
+  end
+
+  def self.configure
+    yield configuration
   end
 end
