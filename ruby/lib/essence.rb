@@ -10,7 +10,7 @@ module Essence
   autoload :Avatar, "essence/components/avatar"
   autoload :Badge, "essence/components/badge"
   autoload :Button, "essence/components/button"
-  autoload :Essence, "essence/components/essence" # Base component
+  # autoload :Essence, "essence/components/essence" # Base component
   autoload :Link, "essence/components/link"
   autoload :Row, "essence/components/row"
   autoload :Skeleton, "essence/components/skeleton"
@@ -18,6 +18,10 @@ module Essence
   autoload :CLI, "essence/cli"
 
   class << self
+    def root_path
+      File.dirname(__dir__)
+    end
+
     # CONFIGURATION
     def configuration
       @configuration ||= Configuration.new
@@ -64,6 +68,11 @@ module Essence
           name: "Skeleton",
           class_name: "Essence::Skeleton",
           stimulus: false
+        },
+        tabs: {
+          name: "Tabs",
+          class_name: "Essence::Tabs",
+          stimulus: true
         }
       }
     end

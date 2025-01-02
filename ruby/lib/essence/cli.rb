@@ -17,11 +17,11 @@ module Essence
       extend Dry::CLI::Registry
 
       # Constants
+      STIMULUS_CONTROLLERS_DIR = Pathname.new(::Essence.root_path).join("essence/stimulus")
+      STIMULUS_CONTROLLERS_DESTINATION_DIR = Pathname.new(File.expand_path(Dir.pwd)).join(::Essence.configuration.stimulus_controller_path)
+
       COMPONENTS_DIR = Pathname.new(File.expand_path("components", __dir__))
       DESTINATION_DIR = Pathname.new(File.expand_path(Dir.pwd)).join(::Essence.configuration.phlex_components_path)
-
-      STIMULUS_CONTROLLERS_DIR = Pathname.new(File.expand_path(__dir__)).join("essence/stimulus")
-      STIMULUS_CONTROLLERS_DESTINATION_DIR = Pathname.new(File.expand_path(Dir.pwd)).join(::Essence.configuration.stimulus_controller_path)
 
       COMPONENT_DEFINITION_PREFIX = "class Essence::"
       COMPONENT_DEFINITION_SUFFIX = "< Essence::Essence"
@@ -36,6 +36,7 @@ module Essence
       private
 
       # UTILITIES
+      # PHLEX COMPONENTS
       def self.copy_component(component_name:)
         source_path = COMPONENTS_DIR.join("#{component_name}.rb")
         destination_path = DESTINATION_DIR.join("#{component_name}.rb")
@@ -61,6 +62,15 @@ module Essence
         return unless File.exist?(from)
 
         FileUtils.mv(from, to)
+      end
+
+      # STIMULUS CONTROLLERS
+      def self.copy_controller(component_name:)
+        source_path = STIMULUS_CONTROLLERS_DIR.join("#{component_name}_controller.js")
+        destination_path = STIMULUS_CONTROLLERS_DESTINATION_DIR.join("#{component_name}_controller.js")
+
+        FileUtils.mkdir_p(STIMULUS_CONTROLLERS_DESTINATION_DIR)
+        FileUtils.copy(source_path, destination_path)
       end
     end
   end
