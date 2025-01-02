@@ -4,6 +4,10 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 
 ### Unreleased
 
+### 0.3.1
+
+- fix: Including Stimulus files in the gemspec
+
 ### 0.3.0
 
 - feature: Adding `Tabs` component

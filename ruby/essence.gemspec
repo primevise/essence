@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = "https://github.com/primevise/essence"
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
-    Dir["{components,lib}/**/*", "exe/*", "LICENCE", "Rakefile", "README.md"]
+    Dir["essence/**/*", "{components,lib}/**/*", "exe/*", "LICENCE", "Rakefile", "README.md"]
   end
 
   spec.bindir = "exe"
