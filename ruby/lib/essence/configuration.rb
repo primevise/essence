@@ -5,7 +5,7 @@ module Essence
 
     def initialize
       @phlex_components_path = "app/components"
-      @stimulus_controller_path = "app/javascript/controllers"
+      @stimulus_controller_path = "app/javascript/controllers/essence"
     end
   end
 end

@@ -4,6 +4,10 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 
 ### Unreleased
 
+- feature: Adding `Tabs` component
+- feature: Adding configuration options: `phlex_components_path`, `stimulus_controller_path`
+- chore: Initializing some basic RDoc documentation
+
 ### 0.2.3
 
 - feature: Adding `Accordion` component

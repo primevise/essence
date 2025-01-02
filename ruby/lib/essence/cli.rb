@@ -18,7 +18,8 @@ module Essence
 
       # Constants
       COMPONENTS_DIR = Pathname.new(File.expand_path("components", __dir__))
-      DESTINATION_DIR = Pathname.new(File.expand_path(Dir.pwd)).join("app/components")
+      DESTINATION_DIR = Pathname.new(File.expand_path(Dir.pwd)).join(::Essence.configuration.phlex_components_path)
+
       COMPONENT_DEFINITION_PREFIX = "class Essence::"
       COMPONENT_DEFINITION_SUFFIX = "< Essence::Essence"
       PHLEX_COMPONENT_DEFINITION_PREFIX = "class Components::"
