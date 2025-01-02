@@ -20,6 +20,9 @@ module Essence
       COMPONENTS_DIR = Pathname.new(File.expand_path("components", __dir__))
       DESTINATION_DIR = Pathname.new(File.expand_path(Dir.pwd)).join(::Essence.configuration.phlex_components_path)
 
+      STIMULUS_CONTROLLERS_DIR = Pathname.new(File.expand_path(__dir__)).join("essence/stimulus")
+      STIMULUS_CONTROLLERS_DESTINATION_DIR = Pathname.new(File.expand_path(Dir.pwd)).join(::Essence.configuration.stimulus_controller_path)
+
       COMPONENT_DEFINITION_PREFIX = "class Essence::"
       COMPONENT_DEFINITION_SUFFIX = "< Essence::Essence"
       PHLEX_COMPONENT_DEFINITION_PREFIX = "class Components::"
