@@ -6,6 +6,7 @@ require_relative "essence/configuration"
 
 module Essence
   # Autoloading
+  # Components
   autoload :Accordion, "essence/components/accordion"
   autoload :Avatar, "essence/components/avatar"
   autoload :Badge, "essence/components/badge"
@@ -15,6 +16,7 @@ module Essence
   autoload :Row, "essence/components/row"
   autoload :Skeleton, "essence/components/skeleton"
 
+  # CLI
   autoload :CLI, "essence/cli"
 
   class << self

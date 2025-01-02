@@ -19,15 +19,21 @@ export default class extends Controller {
   }
 
   next(event) {
-    const tab = event.target.nextElementSibling;
-    if (!tab) return;
-    tab.click();
-    tab.focus();
+    this.navigate(event, "next");
   }
 
   previous(event) {
-    const tab = event.target.previousElementSibling;
+    this.navigate(event, "previous");
+  }
+
+  navigate(event, direction) {
+    const tab =
+      direction === "next"
+        ? event.target.nextElementSibling
+        : event.target.previousElementSibling;
+
     if (!tab) return;
+
     tab.click();
     tab.focus();
   }

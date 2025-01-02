@@ -4,7 +4,10 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 
 ### Unreleased
 
+### 0.3.0
+
 - feature: Adding `Tabs` component
+- feature: Adding `Stimulus` controller generator via CLI
 - feature: Adding configuration options: `phlex_components_path`, `stimulus_controller_path`
 - chore: Initializing some basic RDoc documentation
 
