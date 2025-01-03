@@ -4,6 +4,8 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 
 ### Unreleased
 
+- feature: Adding `Switch` component
+
 ### 0.3.1
 
 - fix: Including Stimulus files in the gemspec
