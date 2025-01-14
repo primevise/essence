@@ -17,7 +17,7 @@ module Essence
       extend Dry::CLI::Registry
 
       # Constants
-      STIMULUS_CONTROLLERS_DIR = Pathname.new(::Essence.root_path).join("essence/stimulus")
+      STIMULUS_CONTROLLERS_DIR = Pathname.new(File.expand_path("stimulus", __dir__))
       STIMULUS_CONTROLLERS_DESTINATION_DIR = Pathname.new(File.expand_path(Dir.pwd)).join(::Essence.configuration.stimulus_controller_path)
 
       COMPONENTS_DIR = Pathname.new(File.expand_path("components", __dir__))

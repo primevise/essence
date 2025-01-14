@@ -71,6 +71,11 @@ module Essence
           class_name: "Essence::Skeleton",
           stimulus: false
         },
+        switch: {
+          name: "Switch",
+          class_name: "Essence::Switch",
+          stimulus: true
+        },
         tabs: {
           name: "Tabs",
           class_name: "Essence::Tabs",
