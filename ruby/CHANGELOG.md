@@ -5,6 +5,7 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 ### Unreleased
 
 - feature: Adding `Switch` component
+- feature: Adding `Separator` component
 
 ### 0.3.1
 
