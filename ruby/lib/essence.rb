@@ -56,6 +56,11 @@ module Essence
           class_name: "Essence::Button",
           stimulus: false
         },
+        checkbox: {
+          name: "Checkbox",
+          class_name: "Essence::Checkbox",
+          stimulus: false
+        },
         link: {
           name: "Link",
           class_name: "Essence::Link",
