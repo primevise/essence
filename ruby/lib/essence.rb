@@ -11,10 +11,13 @@ module Essence
   autoload :Avatar, "essence/components/avatar"
   autoload :Badge, "essence/components/badge"
   autoload :Button, "essence/components/button"
+  autoload :Checkbox, "essence/components/checkbox"
   # autoload :Essence, "essence/components/essence" # Base component
+  autoload :Label, "essence/components/label"
   autoload :Link, "essence/components/link"
   autoload :Row, "essence/components/row"
   autoload :Skeleton, "essence/components/skeleton"
+  autoload :Switch, "essence/components/switch"
 
   # CLI
   autoload :CLI, "essence/cli"
@@ -59,6 +62,11 @@ module Essence
         checkbox: {
           name: "Checkbox",
           class_name: "Essence::Checkbox",
+          stimulus: false
+        },
+        label: {
+          name: "Label",
+          class_name: "Essence::Label",
           stimulus: false
         },
         link: {
