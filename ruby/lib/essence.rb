@@ -29,6 +29,11 @@ module Essence
           class_name: "Essence::Accordion",
           stimulus: false
         },
+        alert: {
+          name: "Alert",
+          class_name: "Essence::Alert",
+          stimulus: false
+        },
         avatar: {
           name: "Avatar",
           class_name: "Essence::Avatar",
