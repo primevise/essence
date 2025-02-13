@@ -5,21 +5,6 @@ require "tailwind_merge"
 require_relative "essence/configuration"
 
 module Essence
-  # Autoloading
-  # Components
-  autoload :Accordion, "essence/components/accordion"
-  autoload :Avatar, "essence/components/avatar"
-  autoload :Badge, "essence/components/badge"
-  autoload :Button, "essence/components/button"
-  autoload :Checkbox, "essence/components/checkbox"
-  # autoload :Essence, "essence/components/essence" # Base component
-  autoload :Label, "essence/components/label"
-  autoload :Link, "essence/components/link"
-  autoload :Row, "essence/components/row"
-  autoload :Skeleton, "essence/components/skeleton"
-  autoload :Switch, "essence/components/switch"
-
-  # CLI
   autoload :CLI, "essence/cli"
 
   class << self
@@ -69,6 +54,11 @@ module Essence
           class_name: "Essence::Label",
           stimulus: false
         },
+        input: {
+          name: "Input",
+          class_name: "Essence::Input",
+          stimulus: false
+        },
         link: {
           name: "Link",
           class_name: "Essence::Link",
@@ -77,6 +67,11 @@ module Essence
         row: {
           name: "Row",
           class_name: "Essence::Row",
+          stimulus: false
+        },
+        separator: {
+          name: "Separator",
+          class_name: "Essence::Separator",
           stimulus: false
         },
         skeleton: {
