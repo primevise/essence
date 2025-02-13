@@ -9,6 +9,7 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 - feature: Adding `Label` component
 - feature: Adding `Separator` component
 - feature: Adding `Switch` component
+- fix: Removing `Phlex::Kit` from the base component
 
 ### 0.3.1
 
