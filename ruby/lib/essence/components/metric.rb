@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Essence::Card < Essence::Essence
+class Essence::Metric < Essence::Essence
   BASE = "p-4 border rounded-xs"
   HELPER_BASE = "text-xs uppercase font-medium text-gray-500"
   TITLE_BASE = "text-2xl text-gray-900 font-medium"

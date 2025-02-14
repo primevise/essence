@@ -49,11 +49,6 @@ module Essence
           class_name: "Essence::Button",
           stimulus: false
         },
-        card: {
-          name: "Card",
-          class_name: "Essence::Card",
-          stimulus: false
-        },
         checkbox: {
           name: "Checkbox",
           class_name: "Essence::Checkbox",
@@ -72,6 +67,11 @@ module Essence
         link: {
           name: "Link",
           class_name: "Essence::Link",
+          stimulus: false
+        },
+        metric: {
+          name: "Metric",
+          class_name: "Essence::Metric",
           stimulus: false
         },
         row: {
