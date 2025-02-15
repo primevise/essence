@@ -1,10 +1,17 @@
 # frozen_string_literal: true
 
 class Essence::Alert < Essence::Essence
-  BASE = "bg-white border border-gray-200 flex flex-col p-3 sm:p-4 rounded-sm"
+  BASE = "bg-white border-l-2 flex flex-col p-3 sm:p-4 bg-gray-50/50"
   TITLE_BASE = "text-gray-900 text-sm sm:text-base font-medium w-full"
   DESCRIPTION_BASE = "text-gray-700 flex text-xs sm:text-sm w-full"
   ICON_BASE = "inline-flex items-center justify-center w-fit size-7 rounded-xs"
+
+  KINDS = {
+    primary: "border-blue-500",
+    critical: "border-rose-600",
+    warning: "border-orange-400",
+    success: "border-emerald-500"
+  }
 
   ICON_KINDS = {
     primary: "bg-blue-500 text-white",
@@ -19,7 +26,7 @@ class Essence::Alert < Essence::Essence
   def initialize(kind: :primary, **attributes)
     @kind = kind
     super(**attributes)
-    @attributes[:class] = merge_classes([ BASE, attributes[:class] ])
+    @attributes[:class] = merge_classes([ BASE, KINDS[kind], attributes[:class] ])
   end
 
   def view_template(&)
