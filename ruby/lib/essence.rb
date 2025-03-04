@@ -21,6 +21,10 @@ module Essence
       yield configuration
     end
 
+    def definitions
+      @definitions ||= Essence::DEFINITIONS
+    end
+
     # COMPONENTS
     def components
       @components ||= {
