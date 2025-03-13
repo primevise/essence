@@ -3,6 +3,7 @@
 require "tailwind_merge"
 
 require_relative "essence/configuration"
+require_relative "essence/definitions"
 
 module Essence
   autoload :CLI, "essence/cli"
