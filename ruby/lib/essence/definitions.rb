@@ -30,6 +30,11 @@ module Essence
       class_name: "Essence::Checkbox",
       stimulus: false
     },
+    heading: {
+      name: "Heading",
+      class_name: "Essence::Heading",
+      stimulus: false
+    },
     label: {
       name: "Label",
       class_name: "Essence::Label",
@@ -74,6 +79,11 @@ module Essence
       name: "Tabs",
       class_name: "Essence::Tabs",
       stimulus: true
+    },
+    text: {
+      name: "Text",
+      class_name: "Essence::Text",
+      stimulus: false
     }
   }
 end
