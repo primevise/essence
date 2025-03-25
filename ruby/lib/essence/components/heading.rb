@@ -1,25 +1,25 @@
 class Essence::Heading < Essence::Essence
   ALLOWED_TAGS = [ :h1, :h2, :h3, :h4, :h5, :h6 ]
-  ALLOWED_KINDS = [ :default, :display ]
-
-  BASE = "font-medium text-gray-900"
-  HEADING_CLASS = {
-    h1: "text-4xl lg:text-5xl",
-    h2: "text-3xl lg:text-4xl",
-    h3: "text-2xl lg:text-3xl",
-    h4: "text-xl lg:text-2xl",
-    h5: "text-lg lg:text-xl",
-    h6: "text-base lg:text-lg"
+  BASE = "font-medium text-gray-900 leading-normal"
+  SIZES = {
+    xs: "text-base lg:text-lg",
+    sm: "text-lg lg:text-xl",
+    md: "text-xl lg:text-2xl",
+    lg: "text-2xl lg:text-3xl",
+    xl: "text-3xl lg:text-4xl",
+    "2xl": "text-4xl lg:text-5xl",
+    "3xl": "text-5xl lg:text-6xl"
   }
 
   attr_reader :as
-  attr_reader :kind
+  attr_reader :size
   attr_reader :attributes
 
-  def initialize(as: :h1, kind: :default, **attributes)
+  def initialize(as: :h2, size: :xs, **attributes)
     super(**attributes)
     @as = ALLOWED_TAGS.include?(as.to_sym) ? as.to_sym : :h1
-    @attributes[:class] = merge_classes([ BASE, HEADING_CLASS[as], attributes[:class] ])
+    @size = SIZES.keys.include?(size.to_sym) ? size.to_sym : :xs
+    @attributes[:class] = merge_classes([ BASE, SIZES[size], attributes[:class] ])
   end
 
   def view_template(&)
