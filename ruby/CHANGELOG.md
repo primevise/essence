@@ -5,11 +5,11 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 ### Unreleased
 
 - feature: Adding `Alert` component
-- feature: Adding `Card` component
 - feature: Adding `Checkbox` component
 - feature: Adding `Input` component
 - feature: Adding `Heading` component
 - feature: Adding `Label` component
+- feature: Adding `Metric` component
 - feature: Adding `Separator` component
 - feature: Adding `Switch` component
 - feature: Adding `Text` component
