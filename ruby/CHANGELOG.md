@@ -4,6 +4,7 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 
 ### Unreleased
 
+- refactor: Updating the base `Essence` component
 - refactor: Simplifying the `Avatar` component
 
 ### 0.4.0
