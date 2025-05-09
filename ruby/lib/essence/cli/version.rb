@@ -3,7 +3,7 @@
 module Essence
   module CLI
     class Version < Dry::CLI::Command
-      desc "Print Essence version"
+      desc "Print version of Essence UI CLI"
 
       def call(*)
         puts Essence::VERSION

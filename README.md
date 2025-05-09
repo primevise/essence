@@ -1,4 +1,4 @@
-# Essence
+# Essence UI
 
 A simple, ergonomic and performant component library for Ruby applications.
 
@@ -39,13 +39,14 @@ Run the installation command and we'll take care of the rest
 bundle exec essence install
 ```
 
-More information on about the installation can be found in the [documentation](https://essence.primevise.com/installation)
+More information on about the installation can be found in the [documentation](https://essenceui.com/installation)
 
 ## Who uses Essence?
 
 - [Mintis](https://mintis.app)
 - [Hansa](https://hansahq.com)
 - [Oversee](https://github.com/primevise/oversee)
+- [No Logo X](https://nologox.com)
 - [Release Server](https://releaseserver.com)
 - [College Life Work](https://work.collegelife.co)
 

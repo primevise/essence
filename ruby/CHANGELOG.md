@@ -4,6 +4,7 @@ This is the changelog for the `essence` gem. For now, most of the updates will b
 
 ### Unreleased
 
+- _GRAND REFACTOR_: Keeping only the CLI functionality and serving components from a registry.
 - refactor: Updating the base `Essence` component
 - refactor: Simplifying the `Avatar` component
 

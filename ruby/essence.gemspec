@@ -22,6 +22,5 @@ Gem::Specification.new do |spec|
  	spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
 
   spec.add_dependency "dry-cli", ">= 0.7", "< 2"
-  spec.add_dependency "phlex", ">= 2.0.0.rc1"
-  spec.add_dependency "tailwind_merge", ">= 0.13.3"
+  spec.add_dependency "faraday", "~> 2.13"
 end

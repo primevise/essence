@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
-require "tailwind_merge"
+# require "tailwind_merge"
 
 require_relative "essence/configuration"
 require_relative "essence/definitions"
 
 module Essence
   autoload :CLI, "essence/cli"
+  autoload :Client, "essence/client"
 
   class << self
     def root_path
