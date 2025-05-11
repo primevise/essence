@@ -22,7 +22,6 @@ module Essence
 
         files.each{ |data| insert_file(slug:, data:) }
         puts "[Essence UI] #{specification.dig("title")} has been successfully added!"
-
       end
 
       private
@@ -32,7 +31,6 @@ module Essence
         ::FileUtils.mkdir_p(destination_path.dirname)
         ::File.write(destination_path, data.dig("content"))
         puts "[Essence UI] Adding #{destination_path}"
-
       end
 
       def build_destination_path(kind:, slug:)
