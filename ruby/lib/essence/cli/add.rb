@@ -10,27 +10,28 @@ module Essence
       example Essence.component_names
 
       def call(*args)
-        slug = args[0][:component].to_sym
-        puts "[Essence UI] Fetching #{slug} component"
+        puts "[Essence UI] Fetching..."
 
+        slug = args[0][:component].to_sym
         specification = ::Essence::Client.new.get_component(slug:)
         return puts "[Essence UI] Component not found. Stopping" if specification == ""
-        insert_file(slug:, specification:)
 
-        dependencies = specification.dig("dependencies")
 
-        if dependencies
-          dependencies.each{|specification| insert_file(slug:, specification: )}
-        end
+        files = specification.dig("files")
+        return puts "[Essence UI] Something went wrong. Stopping" unless files
+
+        files.each{ |data| insert_file(slug:, data:) }
+        puts "[Essence UI] #{specification.dig("title")} has been successfully added!"
+
       end
 
       private
 
-      def insert_file(slug:, specification:)
-        destination_path = build_destination_path(kind: specification["kind"], slug:)
+      def insert_file(slug:, data:)
+        destination_path = build_destination_path(kind: data["kind"], slug:)
         ::FileUtils.mkdir_p(destination_path.dirname)
-        ::File.write(destination_path, specification.dig("definition"))
-        puts "[Essence UI] File added at #{destination_path}"
+        ::File.write(destination_path, data.dig("content"))
+        puts "[Essence UI] Adding #{destination_path}"
 
       end
 
