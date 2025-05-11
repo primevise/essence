@@ -13,14 +13,36 @@ module Essence
         slug = args[0][:component].to_sym
         puts "[Essence UI] Fetching #{slug} component"
 
-        spec = ::Essence::Client.new.get_component(slug:)
-        return puts "[Essence UI] Component not found. Stopping" if spec == ""
+        specification = ::Essence::Client.new.get_component(slug:)
+        return puts "[Essence UI] Component not found. Stopping" if specification == ""
+        insert_file(slug:, specification:)
 
-        destination = ::Essence.configuration.phlex_components_dir.join("#{slug}.rb")
-        puts "[Essence UI] Pasting component to #{destination}"
+        dependencies = specification.dig("dependencies")
 
-        ::FileUtils.mkdir_p(destination.dirname)
-        ::File.write(destination, spec.dig("definition"))
+        if dependencies
+          dependencies.each{|specification| insert_file(slug:, specification: )}
+        end
+      end
+
+      private
+
+      def insert_file(slug:, specification:)
+        destination_path = build_destination_path(kind: specification["kind"], slug:)
+        ::FileUtils.mkdir_p(destination_path.dirname)
+        ::File.write(destination_path, specification.dig("definition"))
+        puts "[Essence UI] File added at #{destination_path}"
+
+      end
+
+      def build_destination_path(kind:, slug:)
+        case kind
+        when "phlex"
+          ::Essence.configuration.phlex_components_dir.join("#{slug}.rb")
+        when "stimulus"
+          ::Essence.configuration.stimulus_controllers_dir.join("#{slug}_controller.rb")
+        else
+          nil
+        end
       end
     end
   end

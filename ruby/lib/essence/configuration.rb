@@ -2,10 +2,10 @@ module Essence
   class Configuration
     attr_accessor :licence_key
     attr_accessor :phlex_components_path
-    attr_accessor :stimulus_controller_path
+    attr_accessor :stimulus_controllers_path
 
     attr_reader :phlex_components_dir
-    attr_reader :stimulus_controller_dir
+    attr_reader :stimulus_controllers_dir
 
     def initialize
       @licence_key = nil
