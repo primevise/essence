@@ -2,7 +2,11 @@
 
 This is the changelog for the `essence` gem. For now, most of the updates will be reflected here.
 
-### Unreleased
+### 1.0.1
+
+- bug: Fixing a bug where an incorrect file extension was added to Stimulus controllers
+
+### 1.0.0
 
 - _GRAND REFACTOR_: Keeping only the CLI functionality and serving components from a registry.
 - refactor: Updating the base `Essence` component

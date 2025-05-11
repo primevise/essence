@@ -38,7 +38,7 @@ module Essence
         when "phlex"
           ::Essence.configuration.phlex_components_dir.join("#{slug}.rb")
         when "stimulus"
-          ::Essence.configuration.stimulus_controllers_dir.join("#{slug}_controller.rb")
+          ::Essence.configuration.stimulus_controllers_dir.join("#{slug}_controller.js")
         else
           nil
         end

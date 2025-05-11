@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    essence (0.4.0)
+    essence (1.0.1)
       dry-cli (>= 0.7, < 2)
       faraday (~> 2.13)
 
