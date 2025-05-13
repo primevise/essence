@@ -17,7 +17,7 @@ module Essence
         return puts "[Essence UI] Component not found. Stopping" if specification == ""
 
 
-        files = specification.dig("files")
+        files = specification.dig("artifacts")
         return puts "[Essence UI] Something went wrong. Stopping" unless files
 
         files.each{ |data| insert_file(slug:, data:) }
