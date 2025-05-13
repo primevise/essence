@@ -5,31 +5,44 @@ require 'fileutils'
 module Essence
   module CLI
     class Add < Dry::CLI::Command
+      attr_reader :slug
+
       desc "Add an Essence UI component"
       argument :component, required: true, desc: "Component name"
       example Essence.component_names
 
       def call(*args)
-        puts "[Essence UI] Fetching..."
+        @slug = args[0][:component].to_sym
 
-        slug = args[0][:component].to_sym
+        puts "[Essence UI] Fetching..."
         specification = ::Essence::Client.new.get_component(slug:)
         return puts "[Essence UI] Component not found. Stopping" if specification == ""
 
 
-        files = specification.dig("artifacts")
-        return puts "[Essence UI] Something went wrong. Stopping" unless files
+        artifacts = specification.dig("artifacts")
+        return puts "[Essence UI] Something went wrong. Stopping" unless artifacts
 
-        files.each{ |data| insert_file(slug:, data:) }
+        artifacts.each { handle_artifact(artifact: _1) }
         puts "[Essence UI] #{specification.dig("title")} has been successfully added!"
       end
 
       private
 
-      def insert_file(slug:, data:)
-        destination_path = build_destination_path(kind: data["kind"], slug:)
+      def handle_artifact(artifact:)
+        case artifact["kind"]
+        when "phlex", "stimulus"
+          insert_file(artifact:)
+        when "node_package"
+          # TODO
+        end
+      end
+
+      def insert_file(artifact:)
+        destination_path = build_destination_path(kind: artifact["kind"], slug:)
+        return unless destination_path
+
         ::FileUtils.mkdir_p(destination_path.dirname)
-        ::File.write(destination_path, data.dig("content"))
+        ::File.write(destination_path, artifact.dig("content"))
         puts "[Essence UI] Adding #{destination_path}"
       end
 
