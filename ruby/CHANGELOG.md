@@ -2,6 +2,14 @@
 
 This is the changelog for the `essence` gem. For now, most of the updates will be reflected here.
 
+### Unreleased
+
+- feature: `install` command adds `tailwind_merge` gem
+
+### 1.0.2
+
+- refactor: Adjusting the `add` command to fit the API spec
+
 ### 1.0.1
 
 - bug: Fixing a bug where an incorrect file extension was added to Stimulus controllers
