@@ -43,8 +43,9 @@ More information on about the installation can be found in the [documentation](h
 
 ## Who uses Essence?
 
+- [Rinkta](https://rinkta.com)
 - [Mintis](https://mintis.app)
-- [Hansa](https://hansahq.com)
+- [Primevise](https://primevise.com)
 - [Oversee](https://github.com/primevise/oversee)
 - [No Logo X](https://nologox.com)
 - [Release Server](https://releaseserver.com)
