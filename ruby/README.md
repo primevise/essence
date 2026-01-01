@@ -43,10 +43,10 @@ More information on about the installation can be found in the [documentation](h
 
 ## Who uses Essence?
 
+- [Rinkta](https://rinkta.com)
 - [Mintis](https://mintis.app)
-- [Hansa](https://hansahq.com)
 - [Oversee](https://github.com/primevise/oversee)
-- [Release Server](https://releaseserver.com)
+- [No Logo X](https://nologox.com)
 - [College Life Work](https://work.collegelife.co)
 
 Do you use Essence in your project? Let us know!
