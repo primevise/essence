@@ -1,6 +1,0 @@
-.ruby-lsp
-.prettierrc
-*.gem
-
-# Just to make sure to ignore dummy files.
-app
