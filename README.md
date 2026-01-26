@@ -1,23 +1,24 @@
+
+
 # Essence UI
 
 A simple, ergonomic and performant component library for Ruby applications.
 
-<a href="https://rubygems.org/gems/essence">
-  <img alt="Essence GEM Version" src="https://img.shields.io/gem/v/essence?color=10b981&include_prereleases&logo=ruby&logoColor=f43f5e">
-</a>
-
-<a href="https://rubygems.org/gems/essence">
-  <img alt="Essence GEM Version" src="https://img.shields.io/gem/dt/essence?color=10b981&include_prereleases&logo=ruby&logoColor=f43f5e">
-</a>
+<a href="https://rubygems.org/gems/essence"><img alt="Essence GEM Version" src="https://img.shields.io/gem/v/essence?color=10b981&include_prereleases&logo=ruby&logoColor=f43f5e"></a>
+<a href="https://rubygems.org/gems/essence"><img alt="Essence GEM Downloads" src="https://img.shields.io/gem/dt/essence?color=10b981&include_prereleases&logo=ruby&logoColor=f43f5e"></a>
 
 ---
 
 ### Features
 
-- Tailored components - Flexible by design while streamlining the development process
-- Gorgeous simplicity - Empowers minimalistic user interface with purposeful accents
-- Geared for performance - Built with performance in mind
-- Ergonomic approach - Designed to be easy to use and understand
+- **Tailored components** - Flexible by design while streamlining the development process
+- **Gorgeous simplicity** - Empowers minimalistic user interface with purposeful accents
+- **Geared for performance** - Built with performance in mind
+- **Ergonomic approach** - Designed to be easy to use and understand
+
+> [!NOTE]  
+> The component files in this repository are mirrored from the [Essence UI registry](https://essenceui.com). Thus, the components here may sometimes be outdated!
+
 
 ---
 
