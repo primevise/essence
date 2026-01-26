@@ -1,5 +1,3 @@
-
-
 # Essence UI
 
 A simple, ergonomic and performant component library for Ruby applications.
@@ -17,8 +15,7 @@ A simple, ergonomic and performant component library for Ruby applications.
 - **Ergonomic approach** - Designed to be easy to use and understand
 
 > [!NOTE]  
-> The component files in this repository are mirrored from the [Essence UI registry](https://essenceui.com). Thus, the components here may sometimes be outdated!
-
+> The components in this repository are mirrored from the [Essence UI registry](https://essenceui.com). Also, keep in mind that there are premium components available for purchase.
 
 ---
 
